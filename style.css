@@ -1,0 +1,326 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: #6070b3;
+  --color-dark: #4a437f;
+  --color-darkest: #1c1e27;
+  --color-light: #97a1c5;
+  --color-lighter: #f6f8fa;
+  --color-accent: #15b097;
+  --color-accent-2: #fbaf00;
+  --color-shadow: #acc1d7;
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-darkest);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5.653rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3.052rem;
+  padding-bottom: 1rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.728rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-dark);
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  color: var(--color-dark);
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.header_text p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 0 1.5rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent);
+  color: var(--color-lighter);
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 3%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-darkest);
+  color: var(--color-lighter);
+}
+
+.light_button {
+  background-color: var(--color-accent-2);
+  color: var(--color-darkest);
+  border-radius: 3%;
+  margin: 0.5rem;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light);
+}
+
+nav a {
+  color: var(--color-darkest);
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-lighter);
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_text p {
+  color: var(--color-darkest);
+}
+
+.header_graphics {
+  width: 45vw;
+  height: 30vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-image: url("https://source.unsplash.com/random/?architecture");
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+#intro h2 {
+  color: var(--color-darkest);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+}
+
+.intro_graphics {
+  width: 25vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-image: url("https://source.unsplash.com/random/?architecture");
+}
+
+#cards {
+  min-height: 80vh;
+  padding: 5rem 5rem;
+  background-color: var(--color-lighter);
+}
+
+#card_container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 3rem;
+  justify-items: center;
+  margin: 5rem 0;
+}
+
+.card {
+  width: 260px;
+  padding: 2rem;
+  box-shadow: 1px 1px 5px 5px var(--color-lighter);
+  border-radius: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+}
+
+.card p,
+.card h3 {
+  width: 100%;
+}
+
+.card_image {
+  width: 100%;
+  height: 200px;
+  padding-bottom: 2rem;
+  object-fit: cover;
+}
+
+.card input {
+  padding: 1rem 2rem;
+  border: 0;
+  font-size: 0.8rem;
+  min-width: 45%;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  color: var(--color-lighter);
+  cursor: pointer;
+}
+
+.card input:hover {
+  background-color: var(--color-darker);
+}
+
+.card_title {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.card a {
+  color: var(--color-accent);
+}
+.card_mail {
+  margin-bottom: 2rem;
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+}
+
+.info_text p {
+  margin-bottom: 2rem;
+  color: var(--color-darkest);
+  line-height: 1.75;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-dark);
+}
+
+#contact h2 {
+  padding-bottom: 3rem;
+  color: var(--color-accent-2);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 6vh 6rem;
+  padding-bottom: 5rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-lighter);
+}
+
+footer li {
+  padding-bottom: 0.4rem;
+}
+
+footer h2,
+footer h3 {
+  line-height: 1;
+  color: var(--color-dark);
+}
+
+footer a {
+  color: var(--color-light);
+  font-weight: 200;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+footer section a {
+  font-size: 0.878rem;
+  line-height: 1.8rem;
+  text-decoration: none;
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
